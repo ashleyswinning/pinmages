@@ -17,3 +17,5 @@ def tags(request):
 def search(request):
     template = get_template('headerbar.html')
     return HttpResponse(template.render())
+
+def 
