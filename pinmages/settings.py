@@ -66,7 +66,6 @@ TEMPLATES = [
     }
 ]
 
-print TEMPLATES
 
 WSGI_APPLICATION = 'pinmages.wsgi.application'
 
