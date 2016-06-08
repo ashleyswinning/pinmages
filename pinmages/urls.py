@@ -19,5 +19,6 @@ from jinja2 import Environment, PackageLoader
 import views
 
 urlpatterns = [
-    url(r'^', views.test),
+    url(r'^$', views.test),
+    url(r'^tags', views.tags)
 ]

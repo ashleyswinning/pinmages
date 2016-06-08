@@ -1,0 +1,31 @@
+body{
+	font-family: helvetica;
+}
+
+div{
+	padding: .1em;
+  background-color: rgba(166, 15, 15, 0.2);
+	height: 100%;
+	max-width: 15%;
+  min-width: 140px;
+
+}
+h1{
+	text-align: center;
+	font-weight: lighter;
+}
+ul li{
+	list-style: none;
+	padding-top: 1.5em;
+	padding-bottom: 1.5em;
+}
+
+ul li a{
+	background-color: 7F0000;
+	color: white;
+	text-decoration: none;
+	text-transform: lowercase;
+		padding: .4em;
+}
+
+
