@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="static/tagsandtemplates.css" />
+<div>
+	<div class="tags">
+	<h2>Tags:</h2>
+		<ul id="tagbox">
+        {% for tag in tags %}
+            <li><a style="background-color:{{tag.get('color')}};" href="#">{{ tag.get('name') }}</a></li>
+        {% endfor %}
+		</ul>
+	</div>
+	<div class="description">
+	<h2>Description:</h2>
+	<p>{{description}}</p>
+	</div>
+
+</div>
+
+
