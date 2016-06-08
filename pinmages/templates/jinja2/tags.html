@@ -3,7 +3,7 @@
 	<h1>Popular Tags:</h1>
 		<ul id="buttons">
         {% for tag in tags %}
-            <li><a href="#">{{ tag.name }}</a></li>
+            <li><a style="background-color:{{tag.get('color')}};" href="#">{{ tag.get('name') }}</a></li>
         {% endfor %}
 		</ul>
 </div>

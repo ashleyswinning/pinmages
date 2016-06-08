@@ -29,11 +29,5 @@ ul li a{
 	text-transform: lowercase;
 	padding: .8em;
 }
-ul li a:hover{
-	/*font-style: italic;*/
-	
-	background-color: 630000;
-
-}
 
 
