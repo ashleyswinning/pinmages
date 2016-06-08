@@ -1,0 +1,17 @@
+#header{
+	border-style: solid;
+	width: 100%;
+	margin: 10px auto 105px;
+	position: relative;
+
+}
+
+.search{
+	border-style:solid;
+	padding: 5px;
+	width: absolute;
+
+}
+
+
+

@@ -20,5 +20,6 @@ import views
 
 urlpatterns = [
     url(r'^$', views.test),
-    url(r'^tags', views.tags)
+    url(r'^tags', views.tags),
+    url(r'^search', views.search)
 ]

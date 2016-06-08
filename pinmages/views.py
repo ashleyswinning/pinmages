@@ -13,3 +13,7 @@ def tags(request):
     tagsWithColors = [ {'name': tag.get('name'), 'color': choice(colors)} for tag in allTags]
     template = get_template('tags.html')
     return HttpResponse(template.render({'tags': tagsWithColors}))
+
+def search(request):
+    template = get_template('headerbar.html')
+    return HttpResponse(template.render())
