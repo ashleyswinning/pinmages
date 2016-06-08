@@ -10,3 +10,7 @@ def tags(request):
         allTags = Tag.objects.all()
 	template = get_template('tags.html')
 	return HttpResponse(template.render({'tags': allTags}))
+
+def search(request):
+	template = get_template('headerbar.html')
+	return HttpResponse(template.render())
