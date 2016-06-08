@@ -4,6 +4,7 @@ from jinja2 import Environment
 
 
 def environment(**options):
+    print options
     env = Environment(**options)
     env.globals.update({
         'static': staticfiles_storage.url,
