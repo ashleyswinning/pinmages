@@ -61,7 +61,9 @@ TEMPLATES = [
         ],
         'APP_DIRS': True,
         'OPTIONS': {
-            'environment': 'pinmages.jinja.environment',
+            'environment': 'pinmages.jinja.environment', 
+            'extensions': ['jinja2.ext.with_']
+            
         }
     }
 ]
