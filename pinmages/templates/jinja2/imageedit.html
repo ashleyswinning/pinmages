@@ -1,26 +1,35 @@
 <head>
-<link rel="stylesheet" type="text/css" href="/static/imageedit.css">
+<link rel="stylesheet" type="text/css" href="static/imageedit.css">
 </head>
 
-<head>
 
-<div class = "header-Bar">
-{% include "headerbar.html" %}
-</div>
-</head>
-
-<div class = "tags-bar">
-{% include "tags.html" %} 
+<div class="sidebar"> {% include 'tags.html' %} </div>
+<div class="header">
+{% include 'headerbar.html' %}
 </div>
 
-<div class = "image-render">
-{% include "image.html" %}
+<div class="content">
+
+<div class = "fotoinfo">
+<div class = "fotoedit">
+{% with svg_data = image_data.get('svg_data')%}
+	{% include 'image.html' %} 
+{% endwith %}
 </div>
 
-<div class = "image-Info">
-{% include "imageinfo.html" %} 
+<div class = "imageinfoedit">
+{% with name = image_data.get('name'), owner = image_data.get('owner')%}
+	{% include 'imageinfo.html' %} 
+{% endwith %}
+
 </div>
 
-<div class = "tags-Description">
-{% include "tagsdescription.html" %} 
+</div>
+
+<div class = "tagsinfoedit">
+{% with description = image_data.get('description'), tags = image_data.get('tags')%}
+	{% include 'tagsdescription.html' %} 
+{% endwith %}
+</div>
+
 </div>

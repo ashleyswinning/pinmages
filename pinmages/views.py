@@ -50,8 +50,9 @@ def viewgrid(request):
 def imageinformation(request):
     template = get_template('imageinfo.html')
     return HttpResponse(template.render())
+   
     
 def imageedit(request):
 	template = get_template('imageedit.html')
-	return HttpResponse(template.render())
+	return HttpResponse(template.render({'tags':getsampletags(), 'image_data': {'svg_data': 'image goes here', 'description':'the description', 'name': 'image name', 'owner': 'the owner', 'tags':getsampletags()}}))
 
