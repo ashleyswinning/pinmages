@@ -21,5 +21,10 @@ def search(request):
 def imageinformation(request):
     template = get_template('imageinfo.html')
     return HttpResponse(template.render())
+    
+def imageedit(request):
+	template = get_template('imageedit.html')
+	return HttpResponse(template.render())
+
 
  

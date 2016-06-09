@@ -22,5 +22,6 @@ urlpatterns = [
     url(r'^$', views.test),
     url(r'^tags', views.tags),
     url(r'^search', views.search), 
-    url(r'^imageinfo', views.imageinformation)
+    url(r'^imageinfo', views.imageinformation),
+    url(r'^imageedit', views.imageedit)
 ]
