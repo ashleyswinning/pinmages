@@ -5,16 +5,41 @@ div{
 	border-style: solid;
 	width: 100%;
 	margin: 10px auto 105px;
+
+body {
+	 font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
+.headerBar {
+
+	
+	border-bottom: 1px solid;
+	border-color: #d3d3d3;
+	width: 100%
+	padding-top: 5px;
+    padding-bottom: 10px;
+
+
+}
+
+
+#searchContainer{
+	margin-right:auto;
+	margin-left: auto;
 	position: relative;
+	width: 300px
 
 }
 
 .search{
-	border-style:solid;
-	padding: 5px;
-	width: absolute;
 
+	
 }
 
+.uploadButton{
+	
+	float: right;
+	
+
+}
 
 
