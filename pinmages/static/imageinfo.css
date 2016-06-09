@@ -4,9 +4,7 @@ body {
 
 .itemContainer{
 
- margin-right: auto;
- margin-left: auto;
- width: 500px;
+ width: 300px;
  padding-top: 10px;
  padding-bottom: 10px;
  padding-right: 10px;
@@ -14,4 +12,45 @@ body {
  
  border-style: 1px solid;
 
+}
+
+.imageName{
+
+ margin-right: 
+
+}
+
+
+
+.owner{
+
+
+}
+
+.dropdown-menu{
+
+
+}
+
+
+
+.or{
+
+
+
+}
+
+
+
+.dimensions-enter{
+
+
+
+}
+
+#my-button{
+
+	height: 20px;
+	display: block;
+	border:0;
 }
