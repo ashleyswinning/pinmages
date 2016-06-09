@@ -9,7 +9,7 @@ def test(request):
 
 def tags(request):
     allTags = [{'name': 'foo'}, {'name': 'bar'}]
-    colors = ["#93B5C6", "#E0F98E", "#F0CF65", "#D7816A", "#BD4F6C"]
+    colors = ["#93B5C6", "#D3F954", "#F0CF65", "#D7816A", "#BD4F6C"]
     tagsWithColors = [ {'name': tag.get('name'), 'color': choice(colors)} for tag in allTags]
     template = get_template('tags.html')
     return HttpResponse(template.render({'tags': tagsWithColors}))
@@ -18,4 +18,8 @@ def search(request):
     template = get_template('headerbar.html')
     return HttpResponse(template.render())
 
-def 
+def imageinformation(request):
+    template = get_template('imageinfo.html')
+    return HttpResponse(template.render())
+
+ 
