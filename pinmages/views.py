@@ -2,6 +2,7 @@ from django.template.loader import get_template
 from django.http import HttpResponse
 from pinmages.models import Tag
 from random import choice
+from image_logic import get_png_bytestring
 
 def getsampletags():
     allTags = [{'name': 'thisisthelongestatagwilleverbe'}, {'name': 'bar'}, {'name': 'anothertag'}]
@@ -56,3 +57,12 @@ def imageedit(request):
 	template = get_template('imageedit.html')
 	return HttpResponse(template.render({'tags':getsampletags(), 'image_data': {'svg_data': 'image goes here', 'description':'the description', 'name': 'image name', 'owner': 'the owner', 'tags':getsampletags()}}))
 
+def download_image(request, id):
+    print (id)
+    svg_data = open('/Users/michaelp/hearts/red.svg').read()
+    width = request.GET.get('width')
+    height = request.GET.get('height')
+    width = int(width) if width is not None and height.isdigit() else None
+    height = int(height) if height is not None and height.isdigit() else None
+    bs = get_png_bytestring(svg_data, width, height)
+    return HttpResponse(bs, content_type='image/png')
