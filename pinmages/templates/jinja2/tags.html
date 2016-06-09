@@ -1,7 +1,10 @@
-<link rel="stylesheet" href="static/tags.css" />
-<div>
+<head>
+<link rel="stylesheet" type="text/css" href="static/tags.css">
+</head>
+<div class="alltags">
 	<h1>Popular Tags:</h1>
-		<ul id="buttons">
+    <hr class="horizline" align="left" width="100%" color="white">
+		<ul class="tagsbuttons">
         {% for tag in tags %}
             <li><a style="background-color:{{tag.get('color')}};" href="#">{{ tag.get('name') }}</a></li>
         {% endfor %}

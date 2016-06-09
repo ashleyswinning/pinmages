@@ -20,8 +20,14 @@ import views
 
 urlpatterns = [
     url(r'^$', views.test),
+    url(r'^tagsdescription', views.tagsdescription),
     url(r'^tags', views.tags),
-    url(r'^search', views.search), 
+    url(r'^search', views.search),
+    url(r'^image', views.image),
+    url(r'^gridedit', views.gridedit),
+    url(r'^grid', views.grid),
+    url(r'^viewgrid', views.viewgrid),
+
     url(r'^imageinfo', views.imageinformation),
     url(r'^imageedit', views.imageedit)
 ]
