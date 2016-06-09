@@ -1,3 +1,65 @@
-div.alltags{
-    
+/*body {
+    margin:0;
+    padding:0;
 }
+
+div.tagsviewgrid{
+    display:inline-block;
+}
+div.gridviewgrid{
+    display: inline-block;
+    overflow: scroll;
+}
+div.appcontent{
+    white-space: nowrap;
+}
+div.grid{
+    white-space: normal;
+}
+div.entirepage{
+    height: 100%;
+}
+*/
+ body {
+    margin: 0;
+ }
+ 
+ .tagsviewgrid {
+   position: fixed;
+   margin-top: 25px;
+   width: 250px;
+   height: 100%;
+ }
+ 
+ div.headerBar {
+   width: 100%;
+   height: 15px;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 1;
+ }
+ 
+ .appcontent {
+   margin-top: 20px;
+   margin-left: 255px;
+   height: 500px;
+   width: auto;
+   position: absolute;
+   overflow: auto;
+   z-index: 0;
+   padding: 20px;
+ }
+ 
+ .content div {
+   height: 100px;
+   width: 100px;
+   background-color: #fff;
+   display: inline-block;
+ }
+
+div.grid{
+   /*! padding-left: 250px; */
+
+}
+

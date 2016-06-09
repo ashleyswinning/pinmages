@@ -2,14 +2,14 @@
 <link rel="stylesheet" type="text/css" href="static/grid.css">
 </head>
 <div class="grid">
+    {% for image in grid_data %}
     <div class="gridcomponent">
-        {% for image in grid_data %}
         <div class="image">
             {{image.get('svg_data')}}
         </div>
         <div class="name">
             {{image.get('name')}}
         </div>
-        {% endfor %}
     </div>
+    {% endfor %}
 </div>

@@ -30,7 +30,7 @@ def image(request):
     return HttpResponse(template.render({'svg_data': 'Here is the photo'}))
 
 def getgriddata():
-    grid_data = [{'svg_data': "this is an image", 'name': "heart"}]
+    grid_data = [{'svg_data': "this is an image", 'name': "heart"}, {'svg_data': "this is an image", 'name': "star"}, {'svg_data': "this is an image", 'name': "smile"}, {'svg_data': "this is an image", 'name': "sparkle"}, {'svg_data': "this is an image", 'name': "unicorn"}, {'svg_data': "this is an image", 'name': "glittery"}]
     return grid_data
 
 def grid(request):

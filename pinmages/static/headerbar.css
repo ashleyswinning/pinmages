@@ -12,6 +12,7 @@ body {
 	width: 100%
 	padding-top: 5px;
     padding-bottom: 10px;
+    height: 25px;
 
 
 }
@@ -21,7 +22,7 @@ body {
 	margin-right:auto;
 	margin-left: auto;
 	position: relative;
-	width: 300px
+	width: 300px;
 
 }
 

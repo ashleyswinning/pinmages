@@ -6,8 +6,7 @@ body{
 	padding: 10px;
   background-color: rgba(166, 166, 166, 0.2);
 	height: 100%;
-	max-width: 250px;
-  min-width: 150px;
+	width: 250px;
 }
 .alltags h1{
 	text-align: center;
