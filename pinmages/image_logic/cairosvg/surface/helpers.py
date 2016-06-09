@@ -69,7 +69,6 @@ def get_height_and_width_for_max(width, height, max_width, max_height):
     max_width = max_width if max_width else float('inf')
     max_height = max_height if max_height else float('inf')
     scale_factor = min(max_width/float(width), max_height/float(height))
-    print scale_factor
     return (round(width*scale_factor), round(height*scale_factor))
 
 def node_format(surface, node, max_width = None, max_height = None):

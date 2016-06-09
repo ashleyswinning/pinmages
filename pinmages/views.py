@@ -58,11 +58,12 @@ def imageedit(request):
 	return HttpResponse(template.render({'tags':getsampletags(), 'image_data': {'svg_data': 'image goes here', 'description':'the description', 'name': 'image name', 'owner': 'the owner', 'tags':getsampletags()}}))
 
 def download_image(request, id):
-    print (id)
     svg_data = open('/Users/michaelp/hearts/red.svg').read()
     width = request.GET.get('width')
     height = request.GET.get('height')
     width = int(width) if width is not None and height.isdigit() else None
     height = int(height) if height is not None and height.isdigit() else None
     bs = get_png_bytestring(svg_data, width, height)
-    return HttpResponse(bs, content_type='image/png')
+    res = HttpResponse(bs, content_type='application/force-download')
+    res['Content-Disposition'] = 'attachment; filename=my_sprite.png'
+    return res
