@@ -6,13 +6,14 @@ body{
 	padding: 10px;
   background-color: rgba(166, 166, 166, 0.2);
 	height: 100%;
-	max-width: 40px;
-  min-width: 160px;
+	max-width: 250px;
+  min-width: 150px;
 }
 .alltags h1{
 	text-align: center;
 	font-weight: lighter;
-	padding-bottom: 10px;
+		padding-bottom: 10px;
+
 }
 
 ul.tagsbuttons{
@@ -40,7 +41,7 @@ ul.tagsbuttons li a{
 	padding: .8em;
 	/*! width: 40px; */
 	
-	overflow: hidden;
+	overflow:hidden;
 	display:block;
  
 }
