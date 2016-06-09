@@ -1,16 +1,8 @@
-div{
-    font-family: helvetica;
-}
-#header{
-	border-style: solid;
-	width: 100%;
-	margin: 10px auto 105px;
-
 body {
 	 font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 }
-.headerBar {
 
+.headerBar {
 	
 	border-bottom: 1px solid;
 	border-color: #d3d3d3;
