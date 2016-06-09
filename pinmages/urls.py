@@ -26,5 +26,6 @@ urlpatterns = [
     url(r'^viewgrid', views.viewgrid),
     url(r'^imageinfo', views.imageinformation),
     url(r'^imageedit', views.imageedit),
-    url(r'^image/(?P<id>\d+)/download', views.download_image)
+    url(r'^image/(?P<id>\d+)/download', views.download_image),
+    url(r'^image', views.image)
 ]

@@ -1,4 +1,4 @@
-import cairosvg
+from . import cairosvg
 
 def get_png_bytestring(svg_data, width=None, height=None):
     return cairosvg.svg2png(
@@ -6,5 +6,3 @@ def get_png_bytestring(svg_data, width=None, height=None):
         parent_width=width,
         parent_height=height
     )
-
-
