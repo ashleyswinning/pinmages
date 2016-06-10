@@ -12,7 +12,7 @@ from django.views.decorators.csrf import csrf_exempt
 def getsampletags():
     allTags = [{'name': 'thisisthelongestatagwilleverbe'}, {'name': 'bar'}, {'name': 'anothertag'}]
     colors = ["#93B5C6", "#D3F954", "#F0CF65", "#D7816A", "#BD4F6C"]
-    tagsWithColors = [ {'name': tag.get('name'), 'color': choice(colors)} for tag in allTags]
+    tagsWithColors = [ (tag, choice(colors)) for tag in allTags]
     return tagsWithColors
 
 def test(request):
@@ -50,9 +50,11 @@ def gridedit(request):
 
 def viewgrid(request):
     images = Image.objects.all()
-    print images
+    tags = Tag.objects.all()
+    colors = ["#93B5C6", "#D3F954", "#F0CF65", "#D7816A", "#BD4F6C"]
+    tagsWithColors = [ (tag, choice(colors)) for tag in tags]
     template = get_template('viewgrid.html')
-    return HttpResponse(template.render({'tags':getsampletags(), 'grid_data':images}))
+    return HttpResponse(template.render({'tags':tagsWithColors, 'grid_data':images}))
 
 
 def imageinformation(request):

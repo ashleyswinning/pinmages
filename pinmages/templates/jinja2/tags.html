@@ -5,8 +5,8 @@
 	<h1>Popular Tags:</h1>
     <hr class="horizline" align="left" width="100%" color="white">
 		<ul class="tagsbuttons">
-        {% for tag in tags %}
-            <li><a style="background-color:{{tag.get('color')}};" href="#">{{ tag.get('name') }}</a></li>
+        {% for tag, color in tags %}
+            <li><a style="background-color:{{color}};" href="#">{{ tag.name }}</a></li>
         {% endfor %}
 		</ul>
 </div>
