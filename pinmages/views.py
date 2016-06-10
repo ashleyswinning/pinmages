@@ -67,3 +67,8 @@ def download_image(request, id):
     res = HttpResponse(bs, content_type='application/force-download')
     res['Content-Disposition'] = 'attachment; filename=my_sprite.png'
     return res
+    
+    
+def imageupload(request):
+	template = get_template('imageupload.html')
+	return HttpResponse(template.render())
