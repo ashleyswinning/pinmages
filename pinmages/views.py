@@ -58,7 +58,7 @@ def imageedit(request):
 	return HttpResponse(template.render({'tags':getsampletags(), 'image_data': {'svg_data': 'image goes here', 'description':'the description', 'name': 'image name', 'owner': 'the owner', 'tags':getsampletags()}}))
 
 def download_image(request, id):
-    svg_data = open('/Users/michaelp/hearts/red.svg').read()
+    svg_data = open('./pinmages/red_heart.svg').read()
     width = request.GET.get('width')
     height = request.GET.get('height')
     width = int(width) if width is not None and height.isdigit() else None
