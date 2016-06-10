@@ -5,10 +5,10 @@
     {% for image in grid_data %}
     <div class="gridcomponent">
         <div class="image">
-            {{image.get('svg_data')}}
+            {{image.svg_data | safe}}
         </div>
         <div class="name">
-            {{image.get('name')}}
+            {{image.name}}
         </div>
     </div>
     {% endfor %}

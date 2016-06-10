@@ -49,8 +49,10 @@ def gridedit(request):
     return HttpResponse(template.render({'grid_data': image}))
 
 def viewgrid(request):
+    images = Image.objects.all()
+    print images
     template = get_template('viewgrid.html')
-    return HttpResponse(template.render({'tags':getsampletags(), 'grid_data':getgriddata()}))
+    return HttpResponse(template.render({'tags':getsampletags(), 'grid_data':images}))
 
 
 def imageinformation(request):
