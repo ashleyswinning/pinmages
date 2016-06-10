@@ -62,9 +62,14 @@ def imageinformation(request):
     return HttpResponse(template.render())
    
     
-def imageedit(request):
-	template = get_template('imageedit.html')
-	return HttpResponse(template.render({'tags':getsampletags(), 'image_data': {'svg_data': 'image goes here', 'description':'the description', 'name': 'image name', 'owner': 'the owner', 'tags':getsampletags()}}))
+def imageedit(request, id):
+    id = int(id) if id is not None else None
+    i = Image.objects.get(id = id)
+    tags = Tag.objects.all()
+    colors = ["#93B5C6", "#D3F954", "#F0CF65", "#D7816A", "#BD4F6C"]
+    tagsWithColors = [ (tag, choice(colors)) for tag in tags]
+    template = get_template('imageedit.html')
+    return HttpResponse(template.render({'tags': tagsWithColors, 'image_data': {'svg_data': i.svg_data, 'description': i.description, 'name': i.name, 'owner': 'Bob Smith', 'tags':getsampletags()}}))
 
 def download_image(request, id):
     svg_data = open('./pinmages/red_heart.svg').read()

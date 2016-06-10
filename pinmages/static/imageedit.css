@@ -57,6 +57,7 @@
   max-width:250px;
   display: inline-block;
   border-style: 1 px solid;
+  overflow: hidden;
  
  
  }
