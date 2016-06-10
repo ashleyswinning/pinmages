@@ -1,8 +1,13 @@
 from django.template.loader import get_template
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
+from forms import UploadFileForm
 from pinmages.models import Tag
+from pinmages.models import Image
 from random import choice
 from image_logic import get_png_bytestring
+import django
+#TODO re-enable csrf
+from django.views.decorators.csrf import csrf_exempt
 
 def getsampletags():
     allTags = [{'name': 'thisisthelongestatagwilleverbe'}, {'name': 'bar'}, {'name': 'anothertag'}]
@@ -68,7 +73,16 @@ def download_image(request, id):
     res['Content-Disposition'] = 'attachment; filename=my_sprite.png'
     return res
     
-    
+
+def handle_uploaded_file(f):
+    bytestring = f.read()
+    i = Image(svg_data=bytestring, name="test_image", description="hi")
+    i.save()
+    print bytestring
+
+@csrf_exempt
 def imageupload(request):
+        if request.method == 'POST':
+            handle_uploaded_file(request.FILES['files[]'])
 	template = get_template('imageupload.html')
 	return HttpResponse(template.render())
